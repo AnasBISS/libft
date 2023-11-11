@@ -43,4 +43,6 @@ int main()
 	char	str[] = "  	 	 --994687dsew";
 	printf("%d\n", ft_atoi(str));
 	printf("%d\n", atoi(str));
+	printf("%d\n", atoi(str));
+
 }
