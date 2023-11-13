@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 23:24:58 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/08 18:06:15 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/12 21:12:30 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<string.h>
+#include "libft.h"
+
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {
@@ -27,19 +27,20 @@ void	*ft_memset(void *ptr, int value, size_t num)
 	}
 	return (ptr);
 }
-int main() {
-    int myArray[10] = {2, 1, 3, 4, 5};  // Declare an integer array of size 10
-	int special[10];
+// }
+// int main() {
+//     int myArray[10] = {2, 1, 3, 4, 5};  // Declare an integer array of size 10
+// 	int special[10];
 
-    // Use your custom my_memset function to set the entire array to zero
+//     // Use your custom my_memset function to set the entire array to zero
    
-	memset(myArray, 1, 8);
+// 	memset(myArray, 1, 8);
 
-    // Print the contents of the array
-    for (int i = 0; i < 10; i++) {
-        printf("myArray[%d] = %d\n", i, myArray[i]);
+//     // Print the contents of the array
+//     for (int i = 0; i < 10; i++) {
+//         printf("myArray[%d] = %d\n", i, myArray[i]);
 		
-    }
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 16:21:17 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/05 16:26:24 by anbouaba         ###   ########.fr       */
+/*   Created: 2023/11/12 21:01:31 by anbouaba          #+#    #+#             */
+/*   Updated: 2023/11/13 02:41:13 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<ctype.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_isprint(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
-}
-
-int main()
-{
-	int 	c = 'a';
-	printf("%d\n", ft_toupper(c));
-	printf("%d\n", toupper(c));
+	if (c >= 32 && c < 127)
+		return (1);
+	else
+		return (0);
 }

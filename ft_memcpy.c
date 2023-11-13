@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:08:14 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/08 18:41:49 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/13 02:40:37 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<string.h>
+
+#include "libft.h"
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest1;
@@ -19,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dest1 = (unsigned char *)dest;
 	src1 = (unsigned char *)src;
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		dest1[i] = src1[i];
@@ -26,15 +30,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-int main()
-{
-	char str[] = "\0";
-	char str1[20];
+// int main()
+// {
 
-	printf("%s\n", ft_memcpy(str1, str, sizeof(str) - 1));
-	printf("%d\n", ft_memcpy(str1 ,str, sizeof(str)));
-	printf("%p\n", ft_memcpy(str1, str, sizeof(str)));
-	printf("%s\n", memcpy(str1, str, sizeof(str) - 1));
-	printf("%d\n", memcpy(str1, str, sizeof(str)));
-	printf("%p\n", memcpy(str1, str, sizeof(str)));
-}
+// 	printf("%s\n", memcpy(0, 0, 2));
+// 	printf("%s\n", ft_memcpy(0, 0, 2));
+// }

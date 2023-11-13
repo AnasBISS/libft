@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:39:42 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/06 18:03:55 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/13 00:01:46 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,12 @@ int	ft_atoi(const char *str)
 	}
 	return (j * k);
 }
-#include<string.h>
-#include<stdio.h>
-int main()
-{
-	char	str[] = "  	 	 --994687dsew";
-	printf("%d\n", ft_atoi(str));
-	printf("%d\n", atoi(str));
-	printf("%d\n", atoi(str));
+// #include<string.h>
+// #include<stdio.h>
+// int main()
+// {
+// 	char	str[] = "  	 	 --994687dsew";
+// 	printf("%d\n", ft_atoi(str));
+// 	printf("%d\n", atoi(str));
 
-}
+// }

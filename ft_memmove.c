@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:51:05 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/08 22:16:52 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/12 23:33:21 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
 
 // void	*ft_memmove(void *dest, const void *src, size_t len)
 // {
@@ -60,16 +60,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (d);
 }
-int main()
-{
-
-	char str[] = "nacer-eddine";
-	char src[] = "kortikortikorti";
-	printf("%s\n",ft_memmove(str ,src,13));
-	// char src[20] = "hewtkhghjlghjkhh";
-	// char dest[8] = "fylally";
-	// printf("%s\n", ft_memmove(dest, src, 12));
-	// //printf("%d\n", ft_memmove(dest, src, 0));
-	// printf("%s\n", memmove(dest, src , 12));
-	// //printf("%d\n", memmove(dest, src, 8));
-}
+// int main()
+// {
+// 	char src[20] = "hewtkhghjlghjkhh";
+// 	char dest[8] = "fylally";
+// 	printf("%s\n", ft_memmove(dest, src, 12));
+// 	//printf("%d\n", ft_memmove(dest, src, 0));
+// 	printf("%s\n", memmove(dest, src , 12));
+// 	//printf("%d\n", memmove(dest, src, 8));
+// }

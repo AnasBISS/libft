@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 16:27:31 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/05 16:37:06 by anbouaba         ###   ########.fr       */
+/*   Created: 2023/11/12 20:58:28 by anbouaba          #+#    #+#             */
+/*   Updated: 2023/11/13 00:07:09 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<ctype.h>
+#include"libft.h"
 
-int	ft_tolower(int c)
+void *ft_calloc(size_t num_elements, size_t element_size)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
-}
-int main()
-{
-	int	c = '0';
-	printf("%d\n", ft_tolower(c));
-	printf("%d\n", tolower(c));
+    void    *ptr;
+    ptr = malloc(sizeof(num_elements * element_size));
+    return ptr;
 }

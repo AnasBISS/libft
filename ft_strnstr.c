@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:06:50 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/06 22:47:43 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/13 03:29:50 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdlib.h>
-#include<xlocale.h>
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	size_t	i;
 	int	j;
 	int	size;
 
@@ -24,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (needle[size] != '\0')
 		size++;
 	if (needle[j] == 0)
-		return (haystack);
+		return ((char *)&haystack[i]);
 	while (haystack[i] != '\0' && i < len)
 	{
 		if (haystack[i] == needle[j])
@@ -32,14 +33,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		else
 			j = 0;
 		if (j == size)
-			return ((char *)&str[i - j + 1]);
+			return ((char *)&haystack[i - j + 1]);
 		i++;
 	}
+	return (0);
 }
-int main()
-{
-	char str[] = "salut comment ca va";
-	char str1[] = "comment ca va";
-	size_t c = 3;
-	printf("%s\n", ft_)
-}
+// int main()
+// {
+// 	char str[] = "salut comment ca va";
+// 	char str1[] = "comment ca va";
+// 	size_t c = 3;
+// 	printf("%s\n", ft_)
+// }

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbouaba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:42:33 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/06 22:54:36 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/12 23:59:38 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
@@ -29,12 +30,12 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-#include<stdio.h>
-int main()
-{
-	char str[] = "sfijfdihcferftrh";
-	int	c = 0;
+// #include<stdio.h>
+// int main()
+// {
+// 	char str[] = "sfijfdihcferftrh";
+// 	int	c = 0;
 
-	printf("%p\n", ft_strchr(str, c));
-	printf("%p\n", strchr(str, c));
-}
+// 	printf("%p\n", ft_strchr(str, c));
+// 	printf("%p\n", strchr(str, c));
+// }
