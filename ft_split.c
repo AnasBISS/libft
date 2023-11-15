@@ -6,13 +6,11 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:03:48 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/12 22:39:23 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:47:30 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 int	count_word(char const	*str, char c)
 {
@@ -68,6 +66,8 @@ char	**ft_split(char const *str, char c)
 
 	i = 0;
 	j = 0;
+	if (!str)
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (count_word(str, c) + 1));
 	if (!tab)
 		return (NULL);

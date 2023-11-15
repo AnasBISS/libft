@@ -1,39 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 21:05:30 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/15 00:46:09 by anbouaba         ###   ########.fr       */
+/*   Created: 2023/11/14 01:37:42 by anbouaba          #+#    #+#             */
+/*   Updated: 2023/11/15 00:15:46 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static int	countnum(long int i)
 {
-	char	*str;
-	size_t	i;
+	int	count;
 
-	if (!s)
-		return (0);
-	if (start >= (unsigned int) ft_strlen(s))
-		return (ft_calloc(1, 1));
-	i = 0;
-	while (s[start + i] && i < len)
-		i++;
-	str = (char *) malloc(sizeof(char) * (i + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (s[start + i] && i < len)
+	count = 0;
+	if (i < 0)
 	{
-		str[i] = s[start + i];
-		i++;
+		i *= -1;
+		count++;
 	}
-	str[i] = '\0';
+	while (i > 0)
+	{
+		i /= 10;
+		count++;
+	}
+	return (count);
+}
+
+char	*ft_itoa(int n)
+{
+	char		*str;
+	int			i;
+	long int	nb;
+
+	nb = n;
+	i = countnum(nb);
+	if (nb == 0)
+		i++;
+	str = malloc(i * sizeof(char) + 1);
+	if (!str)
+		return (0);
+	str[i--] = 0;
+	if (nb == 0)
+		str[0] = 48;
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = nb * -1;
+	}
+	while (nb > 0)
+	{
+		str[i--] = nb % 10 + '0';
+		nb = nb / 10;
+	}
 	return (str);
 }

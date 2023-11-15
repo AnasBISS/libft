@@ -6,20 +6,18 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:03:43 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/13 02:55:29 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:30:43 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (*s != '\0')
-    {
-        write(fd, s, ft_strlen(s));
-    }
+	if (!s || fd < 0)
+		return ;
+	if (*s != '\0')
+	{
+		write(fd, s, ft_strlen(s));
+	}
 }
-
-
-
-

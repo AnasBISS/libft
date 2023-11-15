@@ -6,14 +6,11 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:47:41 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/12 21:20:31 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/15 03:20:36 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdlib.h>
-#include<string.h>
-#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

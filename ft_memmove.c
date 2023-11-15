@@ -6,36 +6,12 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:51:05 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/12 23:33:21 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/15 03:45:12 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// void	*ft_memmove(void *dest, const void *src, size_t len)
-// {
-// 	unsigned char	*dest1;
-// 	unsigned char	*src1;
-// 	size_t	i;
-
-// 	i = 0;
-// 	if (dest == NULL || src == NULL)
-// 		return (NULL);
-// 	dest1 = (unsigned char *)dest;
-// 	src1 = (unsigned char *)src;
-// 	if (dest1 > src1)
-// 	{
-// 		while (len-- > 0)
-// 			dest1[len] = src1[len]
-// 	}
-// 	else
-// 		while (i < len)
-// 		{
-// 			dest1[i] = src1[i];
-// 			i++;
-// 		}
-// 	return (dest);
-// }
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*s;
@@ -60,12 +36,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (d);
 }
-// int main()
-// {
-// 	char src[20] = "hewtkhghjlghjkhh";
-// 	char dest[8] = "fylally";
-// 	printf("%s\n", ft_memmove(dest, src, 12));
-// 	//printf("%d\n", ft_memmove(dest, src, 0));
-// 	printf("%s\n", memmove(dest, src , 12));
-// 	//printf("%d\n", memmove(dest, src, 8));
-// }
+
+int main()
+{
+	char dest[] = "abcdefghijklmopq";
+	char src[] = "fylally";
+	printf("%s\n", ft_memmove(dest, src, ft_strlen(src)));
+	//printf("%d\n", ft_memmove(dest, src, 0));
+	// printf("%s\n", memmove(dest, src , 12));
+	//printf("%d\n", memmove(dest, src, 8));
+}

@@ -6,18 +6,15 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:42:33 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/12 23:59:38 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:42:44 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdlib.h>
-#include<ctype.h>
-#include<string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -30,6 +27,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
+
 // #include<stdio.h>
 // int main()
 // {

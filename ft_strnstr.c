@@ -6,22 +6,23 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:06:50 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/13 03:29:50 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:47:21 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdlib.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	int	j;
-	int	size;
+	int		j;
+	int		size;
 
 	i = 0;
 	j = 0;
 	size = 0;
+	if (!haystack && !len)
+		return (NULL);
 	while (needle[size] != '\0')
 		size++;
 	if (needle[j] == 0)
@@ -43,5 +44,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	char str[] = "salut comment ca va";
 // 	char str1[] = "comment ca va";
 // 	size_t c = 3;
-// 	printf("%s\n", ft_)
+// 	printf("%s\n", ft_strnstr(str, str1, 1));
 // }

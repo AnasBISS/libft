@@ -6,7 +6,7 @@
 /*   By: anbouaba <anbouaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:08:14 by anbouaba          #+#    #+#             */
-/*   Updated: 2023/11/13 02:40:37 by anbouaba         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:48:49 by anbouaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest1;
-	unsigned char *src1;
+	unsigned char	*src1;
 	size_t			i;
 
 	dest1 = (unsigned char *)dest;
@@ -30,9 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// int main()
-// {
-
-// 	printf("%s\n", memcpy(0, 0, 2));
-// 	printf("%s\n", ft_memcpy(0, 0, 2));
-// }
